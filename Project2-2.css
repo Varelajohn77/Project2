@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+
+/* HTML & Body */
+
+body {
+    color: darkturquoise;
+    background-color: navy;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "header header" 
+                         "intro faq" 
+                         "articles faq" 
+                         "footer footer";
+    grid-column-gap: 15px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body > article {
+    grid-area: intro;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+body > aside {
+    grid-area:faq;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+body > section {
+    grid-area: articles;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+body > footer {grid-area: footer;}
+body > header {
+    grid-area: header;
+    text-align: center;
+}
+
+article#history {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+article > h2 {
+    grid-area: 1/1/2/3;
+    text-align: center;
+    background-color: gold;
+    
+}
+
+section > h2 {
+    grid-area:1/1/2/3;
+    text-align: center;
+    background-color: gold;
+    max-height: 27%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section#War {
+    grid-template: none;
+}
+
+section#ModT > h2 {
+    grid-area: 1/1/2/3;
+    text-align: center;
+    background-color: gold;
+    max-height: 50%;
+}
+
+/* Header */
+header {
+    height: 150px;
+    background-image: url(E361.jpeg);
+    background-size: 405px 200px;
+    position: relative;
+}
+
+header > h1 {
+    font-family: serif;
+    font-size: 5em;
+    height: 20%;
+    color: white;
+}
+
+img#benz {
+   max-height: 100%;
+    max-width: 100%;
+}
+
+img.Carimg {
+    width:70%;
+}
+
+img#ModelT {
+    max-width: 100%;;
+}
+
+div.gallery {
+    padding: 5px;
+    float: left;
+    width: 180px;
+}
+
+div.gallery img {
+    width:100%;
+    height: auto;
+}
+
+/* Navigation */
+nav{
+    font-family: cursive;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 2em;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    background-color: red;
+    list-style: none;
+}
+
+ul#form {
+    background-color: black;
+    
+}
+
+#Horizontal li{
+    width:100%;
+    font-size: 1.5em;
+}
+
+li a {
+    display:block;
+}
+
+li a:hover{
+    background-color: purple;
+}
